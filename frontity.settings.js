@@ -1,57 +1,40 @@
 const settings = {
-  "name": "blog",
-  "state": {
-    "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
-    }
+  name: "jxnata",
+  state: {
+    frontity: {
+      url: "https://jxnata66294838.wordpress.com",
+      title: "jxnata.dev",
+      description: "Programação, crypto e inovações",
+    },
   },
-  "packages": [
+  packages: [
     {
-      "name": "@frontity/twentytwenty-theme",
-      "state": {
-        "theme": {
-          "menu": [
-            [
-              "Home",
-              "/"
-            ],
-            [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
+      name: "@frontity/twentytwenty-theme",
+      state: {
+        theme: {
+          menu: [
+            ["Home", "/"],
+            ["Dev", "/category/dev/"],
+            ["Crypto", "/category/crypto/"],
           ],
-          "featured": {
-            "showOnList": false,
-            "showOnPost": false
-          }
-        }
-      }
+          featured: {
+            showOnList: false,
+            showOnPost: false,
+          },
+        },
+      },
     },
     {
-      "name": "@frontity/wp-source",
-      "state": {
-        "source": {
-          "url": "https://test.frontity.org"
-        }
-      }
+      name: "@frontity/wp-source",
+      state: {
+        source: {
+          url: "https://jxnata66294838.wordpress.com",
+        },
+      },
     },
     "@frontity/tiny-router",
-    "@frontity/html2react"
-  ]
+    "@frontity/html2react",
+  ],
 };
 
 export default settings;
