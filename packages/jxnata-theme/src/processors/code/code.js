@@ -9,15 +9,10 @@ import "prismjs/components/prism-json";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-bash";
 import "prismjs/components/prism-csharp";
-import "prismjs/components/prism-docker";
-import "prismjs/components/prism-http";
 import "prismjs/components/prism-ignore";
-import "prismjs/components/prism-nginx";
 import "prismjs/components/prism-powershell";
-import "prismjs/components/prism-python";
 import "prismjs/components/prism-jsx";
 import "prismjs/components/prism-regex";
-import "prismjs/components/prism-robotframework";
 import "prismjs/components/prism-sql";
 import "prismjs/components/prism-typescript";
 
@@ -39,7 +34,12 @@ const Code = ({ className, children }) => {
     );
   }
 
-  return <code dangerouslySetInnerHTML={{ __html: children }}></code>;
+  return (
+    <code
+      className={className}
+      dangerouslySetInnerHTML={{ __html: children }}
+    />
+  );
 };
 
 export default Code;
