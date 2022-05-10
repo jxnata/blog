@@ -9,7 +9,7 @@ const settings = {
   },
   packages: [
     {
-      name: "@frontity/jxnata-theme",
+      name: "jxnata-theme",
       state: {
         theme: {
           menu: [

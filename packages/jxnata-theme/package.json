@@ -4,10 +4,14 @@
   "description": "Frontity package created using the Frontity CLI.",
   "keywords": [
     "frontity",
-    "frontity-theme"
+    "frontity-theme",
+    "jxnata"
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "frontity": "^1.17.2"
+    "@frontity/components": "^1.7.2",
+    "@frontity/html2react": "^1.7.0",
+    "frontity": "^1.17.2",
+    "react-spring": "^8.0.27"
   }
 }

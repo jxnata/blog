@@ -451,12 +451,19 @@ const codeStyle = (colors) => css`
   }
 
   pre {
-    border: 0.1rem solid ${colors.gray.light};
+    background: #282a36;
+    color: #f1f1f1;
     line-height: 1.5;
     margin: 4rem 0;
     overflow: auto;
     padding: 3rem 2rem;
     text-align: left;
+    border-radius: 8px;
+    border: none;
+  }
+
+  pre::-webkit-scrollbar {
+    display: none;
   }
 
   pre code {

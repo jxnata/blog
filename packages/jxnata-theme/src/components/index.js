@@ -26,7 +26,10 @@ const Theme = ({ state }) => {
         Not classes here because we use CSS-in-JS. Only global HTML tags. */}
       <Global styles={globalStyles(state.theme.colors)} />
       <FontFaces />
-
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.min.css"
+      />
       {/* Add some metatags to the <head> of the HTML. */}
       <MetaTitle />
       <Head>

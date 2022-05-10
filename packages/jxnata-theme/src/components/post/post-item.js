@@ -116,7 +116,7 @@ export const PostHeader = styled.header`
 
 // Header sizes bases on style.css
 const maxWidths = {
-  thin: "58rem",
+  thin: "70rem",
   small: "80rem",
   medium: "100rem",
 };
@@ -197,7 +197,7 @@ export const PostInner = styled(SectionContainer)`
 
 export const EntryContent = styled.div`
   line-height: 1.5;
-  max-width: 58rem;
+  max-width: 70rem;
   font-family: "Hoefler Text", Garamond, "Times New Roman", serif;
   letter-spacing: normal;
 

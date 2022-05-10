@@ -1,9 +1,10 @@
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 import link from "@frontity/html2react/processors/link";
+import prism from "./processors/prism";
 
-const twentyTwentyTheme = {
-  name: "@frontity/twentytwenty-theme",
+const jxnataTheme = {
+  name: "jxnata-theme",
   roots: {
     /**
      *  In Frontity, any package can add React components to the site.
@@ -20,13 +21,13 @@ const twentyTwentyTheme = {
       colors: {
         gray: {
           base: "#6D6D6D",
-          light: "#eaeaea",
-          lighter: "#f1f1f1",
+          light: "#ffffff",
+          lighter: "#ffffff",
         },
         primary: "#00a484",
-        headerBg: "#f1f1f1",
-        footerBg: "#f1f1f1",
-        bodyBg: "#f1f1f1",
+        headerBg: "#ffffff",
+        footerBg: "#ffffff",
+        bodyBg: "#ffffff",
       },
       // Whether to show the search button in page header
       showSearchInHeader: true,
@@ -83,9 +84,9 @@ const twentyTwentyTheme = {
        * and internal link inside the content HTML.
        * You can add your own processors too.
        */
-      processors: [image, link],
+      processors: [image, link, prism],
     },
   },
 };
 
-export default twentyTwentyTheme;
+export default jxnataTheme;
