@@ -20,7 +20,7 @@ const twentyTwentyTheme = {
       colors: {
         gray: {
           base: "#6D6D6D",
-          light: "#d1d1d1",
+          light: "#eaeaea",
           lighter: "#f1f1f1",
         },
         primary: "#00a484",
