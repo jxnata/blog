@@ -31,6 +31,8 @@ const PostItem = ({
   // Get all categories
   const allCategories = state.source.category;
 
+  const colors = state.theme.colors[state.theme.mode];
+
   /**
    * The item's categories is an array of each category id. So, we'll look up
    * the details of each category in allCategories.
@@ -57,7 +59,7 @@ const PostItem = ({
           {item.categories && <PostCategories categories={categories} />}
 
           {/* The clickable heading for the post */}
-          <PostLink link={item.link}>
+          <PostLink color={colors.accent} link={item.link}>
             <PostItemTitle
               className="heading-size-1"
               dangerouslySetInnerHTML={{ __html: item.title.rendered }}
@@ -180,7 +182,7 @@ export const PostCaption = styled(SectionContainer)`
 `;
 
 const PostLink = styled(Link)`
-  color: #000000;
+  color: ${(props) => props.color};
   text-decoration: none;
   display: inline-block;
   &:hover {

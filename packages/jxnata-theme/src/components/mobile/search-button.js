@@ -11,6 +11,8 @@ const MobileSearchButton = ({ state, actions }) => {
   const { isSearchModalOpen } = state.theme;
   const { openSearchModal } = actions.theme;
 
+  const colors = state.theme.colors[state.theme.mode];
+
   return (
     <ToggleWrapper>
       <SearchToggle
@@ -19,7 +21,11 @@ const MobileSearchButton = ({ state, actions }) => {
         onClick={openSearchModal}
         aria-label="Click to open search bar..."
       >
-        <LabeledIcon icon={SearchIcon} label="Search" />
+        <LabeledIcon
+          color={colors.gray.base}
+          icon={SearchIcon}
+          label="Search"
+        />
       </SearchToggle>
     </ToggleWrapper>
   );

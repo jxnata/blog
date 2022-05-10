@@ -11,6 +11,8 @@ const SearchButton = ({ state, actions }) => {
   const { isSearchModalOpen } = state.theme;
   const { openSearchModal } = actions.theme;
 
+  const colors = state.theme.colors[state.theme.mode];
+
   return (
     <HeaderToggle>
       <ToggleWrapper>
@@ -20,7 +22,11 @@ const SearchButton = ({ state, actions }) => {
           aria-label="Click to open search bar..."
           style={{ bottom: "0.5rem" }}
         >
-          <LabeledIcon icon={SearchIcon} label="Search" />
+          <LabeledIcon
+            color={colors.gray.base}
+            icon={SearchIcon}
+            label="Search"
+          />
         </BaseToggle>
       </ToggleWrapper>
     </HeaderToggle>

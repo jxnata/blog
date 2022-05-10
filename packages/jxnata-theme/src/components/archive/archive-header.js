@@ -17,9 +17,7 @@ const Header = ({ label, children, labelColor }) => {
 export default Header;
 
 const ArchiveHeader = styled.header`
-  color: #000000;
   text-align: center;
-  background-color: #fff;
   padding: 4rem 0;
 
   @media (min-width: 700px) {

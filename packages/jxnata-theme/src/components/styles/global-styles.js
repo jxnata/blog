@@ -76,7 +76,7 @@ const documentSetup = (colors) => css`
   body {
     background: ${colors.bodyBg};
     box-sizing: border-box;
-    color: #000;
+    color: ${colors.accent};
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
       Helvetica, sans-serif;
     font-size: 1.8rem;

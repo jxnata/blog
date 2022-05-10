@@ -127,7 +127,6 @@ const Post = ({ state, actions, libraries }) => {
 export default connect(Post);
 
 const Header = styled(PostHeader)`
-  background-color: #fff;
   margin: 0;
   padding: 4rem 0;
   @media (min-width: 700px) {
@@ -148,7 +147,6 @@ const FeaturedImage = styled(FeaturedMedia)`
   }
 
   &:before {
-    background: #fff;
     content: "";
     display: block;
     position: absolute;

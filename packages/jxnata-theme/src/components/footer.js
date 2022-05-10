@@ -34,7 +34,6 @@ const Footer = ({ state }) => {
             &copy; {currentYear}{" "}
             <Link link={state.frontity.url}>{state.frontity.title}</Link>
           </Copyright>
-          <PoweredBy>Powered by Frontity</PoweredBy>
         </Credits>
         <BackToTop />
       </SiteFooterInner>
@@ -52,12 +51,10 @@ const SiteFooterInner = styled(SectionContainer)`
 
 const SiteFooter = styled.footer`
   margin-top: 5rem;
-  border-color: #dcd7ca;
   border-style: solid;
   border-width: 0;
   padding: 3rem 0;
   background-color: ${(props) => props.bg};
-  color: #000000;
 
   @media (min-width: 700px) {
     margin-top: 8rem;

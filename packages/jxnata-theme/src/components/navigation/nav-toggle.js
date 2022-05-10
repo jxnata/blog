@@ -67,7 +67,6 @@ export const CloseNavToggle = styled(BaseToggle)`
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  color: #000000;
   font-size: 1.6rem;
   font-weight: 500;
   padding: 3.1rem 0;
@@ -101,8 +100,8 @@ export const SearchToggle = styled(BaseToggle)`
 `;
 
 // Generic, reusable component for displaying icon and label
-export const LabeledIcon = ({ icon: Icon, label }) => (
-  <ToggleInner>
+export const LabeledIcon = ({ icon: Icon, label, color }) => (
+  <ToggleInner color={color}>
     <Icon />
     <ToggleText>{label}</ToggleText>
   </ToggleInner>
@@ -126,6 +125,7 @@ export const ToggleInner = styled.span`
     display: block;
     position: relative;
     z-index: 1;
+    fill: ${(props) => props.color};
   }
 `;
 

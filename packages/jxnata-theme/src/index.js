@@ -18,16 +18,32 @@ const jxnataTheme = {
      * relevant state. It is scoped to the `theme` namespace.
      */
     theme: {
+      mode: "light",
       colors: {
-        gray: {
-          base: "#6D6D6D",
-          light: "#ffffff",
-          lighter: "#ffffff",
+        light: {
+          gray: {
+            base: "#6D6D6D",
+            light: "#ffffff",
+            lighter: "#ffffff",
+          },
+          primary: "#00a484",
+          headerBg: "#ffffff",
+          footerBg: "#ffffff",
+          bodyBg: "#ffffff",
+          accent: "#333333",
         },
-        primary: "#00a484",
-        headerBg: "#ffffff",
-        footerBg: "#ffffff",
-        bodyBg: "#ffffff",
+        dark: {
+          gray: {
+            base: "#5e5e5e",
+            light: "#333333",
+            lighter: "#333333",
+          },
+          primary: "#00a484",
+          headerBg: "#0e0e0e",
+          footerBg: "#333333",
+          bodyBg: "#0e0e0e",
+          accent: "#f1f1f1",
+        },
       },
       // Whether to show the search button in page header
       showSearchInHeader: true,
@@ -74,6 +90,12 @@ const jxnataTheme = {
       },
       closeSearchModal: ({ state }) => {
         state.theme.isSearchModalOpen = false;
+      },
+      setLightMode: ({ state }) => {
+        state.theme.mode = "light";
+      },
+      setDarkMode: ({ state }) => {
+        state.theme.mode = "dark";
       },
     },
   },

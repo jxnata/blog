@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { connect, Global, Head, styled } from "frontity";
 import Switch from "@frontity/components/switch";
 import Footer from "./footer";
@@ -11,20 +12,33 @@ import SearchResults from "./search/search-results";
 import SkipLink from "./styles/skip-link";
 import MetaTitle from "./page-meta-title";
 import PageError from "./page-error";
+import Toggle from "./toggle";
 
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
  */
-const Theme = ({ state }) => {
+const Theme = ({ actions, state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
+  const { setLightMode, setDarkMode } = actions.theme;
+
+  const changeTheme = (mode) => {
+    if (mode === "light") setLightMode();
+    else setDarkMode();
+    localStorage.setItem("theme", mode);
+  };
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    changeTheme(storedTheme || "light");
+  }, []);
 
   return (
     <>
       {/* Add global styles for the whole site, like body or a's or font-faces. 
         Not classes here because we use CSS-in-JS. Only global HTML tags. */}
-      <Global styles={globalStyles(state.theme.colors)} />
+      <Global styles={globalStyles(state.theme.colors[state.theme.mode])} />
       <FontFaces />
       <link
         rel="stylesheet"
@@ -56,6 +70,7 @@ const Theme = ({ state }) => {
             <Post when={data.isPostType} />
             <PageError when={data.isError} />
           </Switch>
+          <Toggle />
         </Main>
       </div>
 
