@@ -77,8 +77,7 @@ const documentSetup = (colors) => css`
     background: ${colors.bodyBg};
     box-sizing: border-box;
     color: ${colors.accent};
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-      Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.8rem;
     letter-spacing: -0.015em;
     text-align: left;
@@ -95,6 +94,16 @@ const documentSetup = (colors) => css`
 
   #site-content {
     overflow: hidden;
+  }
+
+  .has-drop-cap:not(:focus):first-letter {
+    float: left;
+    font-size: 8.4em;
+    line-height: 0.68;
+    font-weight: 100;
+    margin: 0.05em 0.1em 0 0;
+    text-transform: uppercase;
+    font-style: normal;
   }
 `;
 

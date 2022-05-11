@@ -32,7 +32,7 @@ const jxnataTheme = {
           headerBg: "#0e0e0e",
           footerBg: "#0e0e0e",
           bodyBg: "#0e0e0e",
-          accent: "#f1f1f1",
+          accent: "#d8d8d8",
         },
       },
       // Whether to show the search button in page header
