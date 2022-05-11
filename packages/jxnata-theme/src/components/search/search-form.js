@@ -7,7 +7,7 @@ import Input from "../styles/input";
 const SearchForm = ({ state, actions, libraries }) => {
   const parse = libraries.source.parse(state.router.link);
   const searchQuery = parse.query["s"];
-  const { primary } = state.theme.colors;
+  const { primary } = state.theme.colors[state.theme.mode];
 
   const { closeSearchModal } = actions.theme;
   // Keep a reference to the input so we can grab it's value on form submission
@@ -37,16 +37,16 @@ const SearchForm = ({ state, actions, libraries }) => {
   return (
     <Form role="search" aria-label="404 not found" onSubmit={handleSubmit}>
       <Label>
-        <ScreenReaderText>Search for:</ScreenReaderText>
+        <ScreenReaderText>Buscar algo:</ScreenReaderText>
         <SearchInput
           type="search"
           defaultValue={searchQuery}
-          placeholder="Search ..."
+          placeholder="Buscar ..."
           ref={inputRef}
         />
       </Label>
       <SearchButton bg={primary} type="submit">
-        Search
+        Buscar
       </SearchButton>
     </Form>
   );

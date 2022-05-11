@@ -25,7 +25,7 @@ const SearchButton = ({ state, actions }) => {
           <LabeledIcon
             color={colors.gray.base}
             icon={SearchIcon}
-            label="Search"
+            label="Buscar"
           />
         </BaseToggle>
       </ToggleWrapper>

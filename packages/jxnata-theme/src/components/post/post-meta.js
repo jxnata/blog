@@ -39,11 +39,15 @@ const PostMeta = ({ state, item }) => {
       <PostMetaList>
         {/* If the post has an author, we render a clickable author text. */}
         {author && (
-          <PostMetaItem icon={UserIcon} label="Post Author" link={author.link}>
-            By {decode(author.name)}
+          <PostMetaItem
+            icon={UserIcon}
+            label="Autor do Post"
+            link={author.link}
+          >
+            Por {decode(author.name)}
           </PostMetaItem>
         )}
-        <PostMetaItem icon={CalendarIcon} label="Post Date">
+        <PostMetaItem icon={CalendarIcon} label="Data do Post">
           {date.toDateString()}
         </PostMetaItem>
         {/* <PostMetaItem icon={ChatIcon} label="Post Comments">

@@ -19,18 +19,18 @@ const SearchResults = ({ state }) => {
 
   return (
     <>
-      <ArchiveHeader label="Search" labelColor={primary}>
+      <ArchiveHeader label="Buscar" labelColor={primary}>
         <span>{`“${reverseFormat(searchQuery)}”`}</span>
         <IntroText size="thin">
           {isEmpty ? (
             <Text>
-              We could not find any results for your search. You can give it
-              another try through the search form below.
+              Ops, não consegui encontrar nenhum resultado para sua pesquisa.
+              Tente novamente aqui embaixo:
             </Text>
           ) : (
             <Text>
-              We found {total} {total === 1 ? "result" : "results"} for your
-              search.
+              Encontrei {total} {total === 1 ? "resultado" : "resultados"} para
+              sua busca.
             </Text>
           )}
         </IntroText>

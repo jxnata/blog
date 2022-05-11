@@ -14,7 +14,7 @@ const BackToTop = () => {
 
   return (
     <a href="#site-header" onClick={scrollToTop} style={{ cursor: "pointer" }}>
-      <span style={{ marginRight: 8 }}>To the top</span>
+      <span style={{ marginRight: 8 }}>Para o topo</span>
       <span className="arrow" aria-hidden="true">
         ↑
       </span>
@@ -53,7 +53,7 @@ const SiteFooter = styled.footer`
   margin-top: 5rem;
   border-style: solid;
   border-width: 0;
-  padding: 3rem 0;
+  padding: 5rem 0;
   background-color: ${(props) => props.bg};
 
   @media (min-width: 700px) {

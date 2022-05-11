@@ -4,16 +4,16 @@ import SectionContainer from "./styles/section-container";
 
 const description404 = (
   <>
-    The page you were looking for could not be found. It might have been
-    removed, renamed, or did not exist in the first place. Search for:
+    Desculpa aí, mas não achei essa página 👀. Ele pode ter sido removida,
+    renomeada ou nem existir. Mas procura aí alguma coisa:
   </>
 );
 
 const description = (
   <>
-    Don&apos;t panic! Seems like you encountered an error. If this persists,
-    <a href="https://community.frontity.org"> let us know </a> or try refreshing
-    your browser. You can also search for:
+    Don&apos;t panic! parece que você encontrou um erro. Caso persista,&nbsp;
+    <a href="https://community.frontity.org">entre em contato </a> ou tente
+    atualizar a página. Você também pode buscar por algo:
   </>
 );
 
@@ -21,7 +21,7 @@ const description = (
 const ErrorPage = ({ state }) => {
   const data = state.source.get(state.router.link);
 
-  const title = "Oops, something bad happened";
+  const title = "Oops, algo ruim aconteceu...";
   const title404 = "Oops! 404";
 
   return (

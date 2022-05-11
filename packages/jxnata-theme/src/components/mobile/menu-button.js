@@ -11,6 +11,8 @@ const MobileMenuButton = ({ state, actions }) => {
   const { isMobileMenuOpen } = state.theme;
   const { openMobileMenu } = actions.theme;
 
+  const colors = state.theme.colors[state.theme.mode];
+
   return (
     <ToggleWrapper>
       <NavToggle
@@ -19,7 +21,7 @@ const MobileMenuButton = ({ state, actions }) => {
         onClick={openMobileMenu}
         aria-label="Click to open search bar..."
       >
-        <LabeledIcon icon={ToggleIcon} label="Menu" />
+        <LabeledIcon icon={ToggleIcon} label="Menu" color={colors.gray.base} />
       </NavToggle>
     </ToggleWrapper>
   );

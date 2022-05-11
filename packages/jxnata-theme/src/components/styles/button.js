@@ -15,6 +15,7 @@ const Button = styled.button`
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 8px;
 `;
 
 export default Button;

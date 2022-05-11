@@ -79,7 +79,7 @@ export const CloseNavToggle = styled(BaseToggle)`
   svg {
     height: 1.6rem;
     width: 1.6rem;
-    fill: currentColor;
+    fill: ${(props) => props.color};
   }
 
   > span {

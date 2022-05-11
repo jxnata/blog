@@ -15,6 +15,8 @@ const MobileMenuModal = ({ state, actions }) => {
   // Check if there are links in the state
   const isThereLinks = menu != null && menu.length > 0;
 
+  const colors = state.theme.colors[state.theme.mode];
+
   /**
    * Keep a reference to the close button so we can focus on it when
    * the modal opens
@@ -31,20 +33,25 @@ const MobileMenuModal = ({ state, actions }) => {
   useFocusTrap(menuRef, isMobileMenuOpen);
 
   return (
-    <Modal data-open={isMobileMenuOpen} role="dialog" aria-modal="true">
+    <Modal
+      bg={colors.bodyBg}
+      data-open={isMobileMenuOpen}
+      role="dialog"
+      aria-modal="true"
+    >
       {/* Global styles to prevent body scroll when the menu is open */}
       {isMobileMenuOpen && (
         <Global styles={{ body: { overflowY: "hidden" } }} />
       )}
-      <ModalInner>
+      <ModalInner bg={colors.bodyBg}>
         <MenuWrapper ref={menuRef}>
           <div style={{ flexShrink: 0 }}>
             <CloseNavToggle
               ref={closeButtonRef}
               aria-expanded={isMobileMenuOpen}
               onClick={closeMobileMenu}
+              color={colors.accent}
             >
-              <ToggleText> Close Menu</ToggleText>
               <CloseIcon />
             </CloseNavToggle>
 
@@ -79,7 +86,7 @@ const MobileMenuModal = ({ state, actions }) => {
 };
 
 const Modal = styled.div`
-  background: #fff;
+  background: ${({ bg }) => bg};
   display: none;
   opacity: 0;
   overflow-y: auto;
@@ -100,7 +107,7 @@ const Modal = styled.div`
 `;
 
 const ModalInner = styled.div`
-  background: #fff;
+  background: ${({ bg }) => bg};
   display: flex;
   justify-content: stretch;
   overflow: auto;
@@ -130,7 +137,7 @@ const MenuList = styled.ul`
 const ToggleText = styled.span`
   margin-right: 1.6rem;
   * {
-    fill: currentColor;
+    fill: ${(props) => props.color};
   }
 `;
 

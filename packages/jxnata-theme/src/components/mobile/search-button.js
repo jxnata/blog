@@ -24,7 +24,7 @@ const MobileSearchButton = ({ state, actions }) => {
         <LabeledIcon
           color={colors.gray.base}
           icon={SearchIcon}
-          label="Search"
+          label="Buscar"
         />
       </SearchToggle>
     </ToggleWrapper>

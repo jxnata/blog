@@ -2,9 +2,9 @@ import { styled } from "frontity";
 
 const Input = styled.input`
   background: #fff;
-  border-radius: 0;
+  border-radius: 8px;
   border-style: solid;
-  border-color: #dcd7ca;
+  border-color: #333;
   border-width: 0.1rem;
   box-shadow: none;
   display: block;

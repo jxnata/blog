@@ -94,21 +94,21 @@ const SearchModal = ({ state, actions }) => {
                   <SectionInner ref={containerRef}>
                     <SearchForm
                       role="search"
-                      aria-label="Search for:"
+                      aria-label="Buscar por:"
                       onSubmit={handleSubmit}
                     >
                       <SearchInput
                         ref={inputRef}
                         type="search"
                         defaultValue={searchQuery || ""}
-                        placeholder="search for:"
+                        placeholder="buscar por:"
                         name="search"
                       />
-                      <SearchButton bg={primary}>Search</SearchButton>
+                      <SearchButton bg={primary}>Buscar</SearchButton>
                     </SearchForm>
 
                     <CloseButton onClick={closeSearchModal}>
-                      <ScreenReaderText>Close search</ScreenReaderText>
+                      <ScreenReaderText>Fechar busca</ScreenReaderText>
                       <CloseIcon />
                     </CloseButton>
                   </SectionInner>
@@ -182,7 +182,7 @@ const SearchInput = styled.input`
   background: none;
   border: none;
   border-radius: 0;
-  color: inherit;
+  color: #111;
   display: block;
   font-size: 2rem;
   letter-spacing: -0.0277em;

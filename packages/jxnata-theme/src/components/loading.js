@@ -47,13 +47,17 @@ const wrapper = (width, height, color) =>
     background-clip: padding-box;
   `;
 
-const Loading = ({ state }) => (
-  <Container>
-    <div css={wrapper(240, 4, state.theme.colors.primary)}>
-      <div css={style(1, state.theme.colors.primary)} />
-    </div>
-  </Container>
-);
+const Loading = ({ state }) => {
+  const primary = state.theme.colors[state.theme.mode].primary;
+
+  return (
+    <Container>
+      <div css={wrapper(240, 4, primary)}>
+        <div css={style(1, primary)} />
+      </div>
+    </Container>
+  );
+};
 
 export default connect(Loading);
 

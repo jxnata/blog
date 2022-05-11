@@ -505,6 +505,10 @@ const mediaStyle = (colors) => css`
     max-width: 100%;
   }
 
+  figure.wp-block-image img {
+    border-radius: 8px;
+  }
+
   figcaption,
   .wp-caption-text {
     color: ${colors.gray.base};

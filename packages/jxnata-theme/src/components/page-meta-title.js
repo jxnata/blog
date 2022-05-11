@@ -20,7 +20,7 @@ const Title = ({ state }) => {
     // 1. Get the author entity from the state to get its name.
     const { name } = state.source.author[data.id];
     // 2. Render the proper title.
-    title = `Author: ${name} - ${state.frontity.title}`;
+    title = `Autor: ${name} - ${state.frontity.title}`;
   } else if (data.isPostType) {
     // Add titles to posts and pages, using the title and ending with the Blog Name.
     // 1. Get the post entity from the state and get its title.
