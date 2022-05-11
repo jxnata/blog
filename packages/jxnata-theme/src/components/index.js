@@ -3,7 +3,6 @@ import { connect, Global, Head, styled } from "frontity";
 import Switch from "@frontity/components/switch";
 import Footer from "./footer";
 import globalStyles from "./styles/global-styles";
-import FontFaces from "./styles/font-faces";
 import Header from "./header";
 import Archive from "./archive";
 import Loading from "./loading";
@@ -39,7 +38,6 @@ const Theme = ({ actions, state }) => {
       {/* Add global styles for the whole site, like body or a's or font-faces. 
         Not classes here because we use CSS-in-JS. Only global HTML tags. */}
       <Global styles={globalStyles(state.theme.colors[state.theme.mode])} />
-      {/* <FontFaces /> */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
