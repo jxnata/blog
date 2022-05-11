@@ -1,7 +1,6 @@
 import React from "react";
 import { connect, styled } from "frontity";
-import SunLogo from "./sun.svg";
-import MoonLogo from "./moon.svg";
+import { MoonIcon, SunIcon } from "./icons";
 
 const Toggle = ({ actions, state }) => {
   const { setLightMode, setDarkMode } = actions.theme;
@@ -21,8 +20,12 @@ const Toggle = ({ actions, state }) => {
     <Container onClick={toggleMode}>
       <CheckBox type="checkbox" />
       <ToggleSlot>
-        <Icon src={SunLogo} alt="light" />
-        <Icon src={MoonLogo} alt="dark" />
+        <Icon>
+          <SunIcon alt="light" />
+        </Icon>
+        <Icon>
+          <MoonIcon alt="dark" />
+        </Icon>
         <ToggleButton mode={mode} />
       </ToggleSlot>
     </Container>
@@ -52,7 +55,7 @@ const ToggleSlot = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-const Icon = styled.img`
+const Icon = styled.span`
   width: 16px;
   height: 16px;
 `;

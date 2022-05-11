@@ -6,10 +6,12 @@ import SearchModal from "./search/search-modal";
 import MobileSearchButton from "./mobile/search-button";
 import MobileMenuButton from "./mobile/menu-button";
 import MobileMenuModal from "./mobile/menu-modal";
+import { LogoIcon } from "./icons";
 
 const Header = ({ state }) => {
   const { title, description } = state.frontity;
-  const { headerBg } = state.theme.colors;
+  const { headerBg } = state.theme.colors[state.theme.mode];
+  const { accent } = state.theme.colors[state.theme.mode];
 
   return (
     <PageHeader bg={headerBg} id="site-header">
@@ -19,11 +21,17 @@ const Header = ({ state }) => {
           {state.theme.showSearchInHeader && <MobileSearchButton />}
 
           {/* Heading and Description of the site */}
+          <StyledLink link="/">
+            {/* <SiteLogo src={Logo} alt="jxnata.dev" /> */}
+            <SiteLogo color={accent}>
+              <LogoIcon />
+            </SiteLogo>
+          </StyledLink>
           <TitleGroup>
-            <SiteTitle>
-              <StyledLink link="/">{title}</StyledLink>
-            </SiteTitle>
-            <SiteDescription>{description}</SiteDescription>
+            <StyledLink link="/">
+              <SiteTitle>{title}</SiteTitle>
+              <SiteDescription>{description}</SiteDescription>
+            </StyledLink>
           </TitleGroup>
 
           {/* Mobile menu button and modal */}
@@ -53,6 +61,7 @@ const TitleGroup = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: center;
     margin: -1rem 0 0 -2.4rem;
   }
 `;
@@ -96,7 +105,7 @@ const HeaderInner = styled.div`
 `;
 
 const SiteTitle = styled.h1`
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 1;
   margin: 0;
@@ -105,8 +114,15 @@ const SiteTitle = styled.h1`
     margin: 1rem 0 0 2.4rem;
   }
   @media (min-width: 700px) {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 700;
+  }
+`;
+
+const SiteLogo = styled.span`
+  svg {
+    margin-right: 10px;
+    fill: ${(props) => props.color};
   }
 `;
 
@@ -114,14 +130,14 @@ const SiteDescription = styled.div`
   margin: 0;
   margin-top: 1rem;
   color: #6d6d6d;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: none;
   letter-spacing: -0.0311em;
   transition: all 0.15s linear;
 
   @media (min-width: 1000px) {
-    margin: 1rem 0 0 2.4rem;
+    margin: 0.5rem 0 0 2.4rem;
   }
 
   @media (min-width: 700px) {
@@ -130,7 +146,7 @@ const SiteDescription = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
   display: block;
 

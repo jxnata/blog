@@ -78,6 +78,7 @@ const MenuLink = styled(Link)`
   display: block;
   line-height: 1.2;
   text-decoration: none;
+  color: inherit;
 
   &:hover,
   &[aria-current="page"] {

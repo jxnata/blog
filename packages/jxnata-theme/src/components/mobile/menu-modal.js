@@ -63,7 +63,7 @@ const MobileMenuModal = ({ state, actions }) => {
               <MenuList>
                 {isThereLinks &&
                   menu.map(([name, link]) => (
-                    <MenuListItem key={name}>
+                    <MenuListItem borderColor={colors.gray.light} key={name}>
                       <MenuLinkWrapper>
                         <MenuLink
                           link={link}
@@ -145,7 +145,7 @@ const MenuListItem = styled.li`
   position: relative;
   border-style: solid;
   border-width: 0.1rem 0 0 0;
-  border-color: #dcd7ca;
+  border-color: ${(props) => props.borderColor};
   display: flex;
   flex-wrap: wrap;
   line-height: 1;
@@ -168,6 +168,7 @@ const MenuLink = styled(Link)`
   text-decoration: none;
   width: 100%;
   text-align: left;
+  color: inherit;
 
   @media (min-width: 700px) {
     font-size: 2.4rem;

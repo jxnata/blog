@@ -122,3 +122,70 @@ export const ToggleIcon = () => (
     />
   </svg>
 );
+
+export const SunIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    viewBox="0 0 24 24"
+    fill="#ffbb52"
+    stroke="#ffbb52"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="feather feather-sun"
+  >
+    <circle cx={12} cy={12} r={5} />
+    <line x1={12} y1={1} x2={12} y2={3} />
+    <line x1={12} y1={21} x2={12} y2={23} />
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+    <line x1={1} y1={12} x2={3} y2={12} />
+    <line x1={21} y1={12} x2={23} y2={12} />
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+  </svg>
+);
+
+export const MoonIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    viewBox="0 0 24 24"
+    fill="#fffdc3"
+    stroke="#fffdc3"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="feather feather-moon"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+  </svg>
+);
+
+export const LogoIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={48}
+    height={48}
+    viewBox="0 0 1024 1024"
+    fill="#383838"
+  >
+    <g id="black" transform="matrix(1.34776,0,0,1.34776,-187.815,-260.592)">
+      <g transform="matrix(0.728162,-0.709221,0.891287,0.91509,-123.058,782.988)">
+        <path
+          fillRule="evenodd"
+          d="M413.596,100.375C455.38,128.534 483.155,178.427 483.155,235.225C483.155,294.212 453.199,345.75 408.708,373.227C366.923,345.069 339.148,295.176 339.148,238.378C339.148,179.391 369.104,127.853 413.596,100.375Z"
+        />
+      </g>
+      <g transform="matrix(1.24662,0,0,1.37351,-164.746,-308.851)">
+        <path
+          fillRule="evenodd"
+          d="M555.456,642.074L555.456,832.605C663.838,832.605 751.703,747.336 751.738,642.143L751.739,642.143L751.739,451.612C643.356,451.612 555.491,536.881 555.456,642.074Z"
+        />
+      </g>
+    </g>
+  </svg>
+);

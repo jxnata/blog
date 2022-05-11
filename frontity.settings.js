@@ -2,8 +2,8 @@ const settings = {
   name: "jxnata",
   state: {
     frontity: {
-      url: "https://jxnata66294838.wordpress.com",
-      title: "jxnata.dev",
+      url: "https://jxnata.wordpress.com",
+      title: "Jonatã Oliveira",
       description: "Programação, crypto e inovações",
     },
   },
@@ -28,7 +28,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "https://jxnata66294838.wordpress.com",
+          url: "https://jxnata.wordpress.com",
         },
       },
     },

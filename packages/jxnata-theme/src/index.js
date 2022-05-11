@@ -6,41 +6,31 @@ import prism from "./processors/prism";
 const jxnataTheme = {
   name: "jxnata-theme",
   roots: {
-    /**
-     *  In Frontity, any package can add React components to the site.
-     *  We use roots for that, scoped to the `theme` namespace.
-     */
     theme: Theme,
   },
   state: {
-    /**
-     * State is where the packages store their default settings and other
-     * relevant state. It is scoped to the `theme` namespace.
-     */
     theme: {
       mode: "light",
       colors: {
         light: {
           gray: {
             base: "#6D6D6D",
-            light: "#ffffff",
-            lighter: "#ffffff",
+            light: "#efefef",
           },
           primary: "#00a484",
           headerBg: "#ffffff",
           footerBg: "#ffffff",
           bodyBg: "#ffffff",
-          accent: "#333333",
+          accent: "#383838",
         },
         dark: {
           gray: {
             base: "#5e5e5e",
             light: "#333333",
-            lighter: "#333333",
           },
           primary: "#00a484",
           headerBg: "#0e0e0e",
-          footerBg: "#333333",
+          footerBg: "#0e0e0e",
           bodyBg: "#0e0e0e",
           accent: "#f1f1f1",
         },
