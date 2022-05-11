@@ -1,4 +1,12 @@
 {
+  "scripts": {
+    "layer0:dev": "layer0 dev",
+    "layer0:build": "layer0 build",
+    "layer0:deploy": "layer0 deploy",
+    "dev": "frontity dev",
+    "build": "frontity build",
+    "serve": "frontity serve"
+  },
   "name": "blog",
   "version": "1.0.0",
   "private": true,
@@ -10,11 +18,6 @@
     "node": ">=10.0.0",
     "npm": ">=6.0.0"
   },
-  "scripts": {
-    "dev": "frontity dev",
-    "build": "frontity build",
-    "serve": "frontity serve"
-  },
   "prettier": {},
   "dependencies": {
     "@frontity/core": "^1.15.1",
@@ -25,5 +28,13 @@
     "frontity": "^1.17.2",
     "jxnata-theme": "file:packages/jxnata-theme",
     "prismjs": "^1.28.0"
+  },
+  "devDependencies": {
+    "@layer0/cli": "^4.13.9",
+    "@layer0/core": "^4.13.9",
+    "@layer0/devtools": "^4.13.9",
+    "@layer0/frontity": "^4.13.9",
+    "@layer0/prefetch": "^4.13.9",
+    "@layer0/react": "^4.13.9"
   }
 }
