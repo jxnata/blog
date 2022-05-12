@@ -38,21 +38,35 @@ const Theme = ({ actions, state }) => {
       {/* Add global styles for the whole site, like body or a's or font-faces. 
         Not classes here because we use CSS-in-JS. Only global HTML tags. */}
       <Global styles={globalStyles(state.theme.colors[state.theme.mode])} />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        rel="stylesheet"
-        href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.min.css"
-      />
       {/* Add some metatags to the <head> of the HTML. */}
       <MetaTitle />
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.min.css"
+        />
+        <link
+          rel="icon"
+          href="https://jxnata.files.wordpress.com/2022/05/cropped-favicon.png?w=32"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          href="https://jxnata.files.wordpress.com/2022/05/cropped-favicon.png?w=192"
+          sizes="192x192"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="https://jxnata.files.wordpress.com/2022/05/cropped-favicon.png?w=180"
+        />
       </Head>
 
       {/* Accessibility: Provides ability to skip to main content */}
