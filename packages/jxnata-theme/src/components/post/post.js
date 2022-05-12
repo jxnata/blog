@@ -1,4 +1,4 @@
-import { styled, connect } from "frontity";
+import { Head, styled, connect, decode } from "frontity";
 import { useEffect } from "react";
 import FeaturedMedia from "./featured-media";
 import {
@@ -62,6 +62,20 @@ const Post = ({ state, actions, libraries }) => {
   const tags = post.tags && post.tags.map((tagId) => allTags[tagId]);
 
   /**
+   * Meta items and Open Graph
+   */
+  const postTags = tags.filter(Boolean).map((tag) => decode(tag.name));
+  const postCategories = categories
+    .filter(Boolean)
+    .map((cat) => decode(cat.name));
+  const postExcerpt = `${decode(post.excerpt.rendered).slice(0, 147)}...`;
+  const postTitle = decode(post.title.rendered);
+  const postAuthor = decode(state.source.author[post.author].name);
+  const postDate = post.date;
+  const postMedia = state.source.attachment[post.featured_media];
+  const postUrl = `${state.frontity.url}${state.router.link}`;
+
+  /**
    * Once the post has loaded in the DOM, prefetch both the
    * home posts and the list component so if the user visits
    * the home page, everything is ready and it loads instantly.
@@ -73,6 +87,24 @@ const Post = ({ state, actions, libraries }) => {
   // Load the post, but only if the data is ready.
   return data.isReady ? (
     <PostArticle>
+      <Head>
+        <meta name="keywords" content={postTags} />
+        <meta name="description" content={postExcerpt} />
+        <meta name="language" content="pt" />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:title" content={postTitle} />
+        <meta property="og:url" content={postUrl} />
+        <meta property="og:site_name" content={state.frontity.title} />
+        <meta property="og:description" content={postExcerpt} />
+        <meta property="og:type" content="article" />
+        <meta property="article:author" content={postAuthor} />
+        <meta property="article:section" content={postCategories[0]} />
+        <meta property="article:tag" content={postTags} />
+        <meta property="article:published_time" content={postDate} />
+        <meta property="og:image" content={postMedia.source_url} />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:locale" content="pt_BR" />
+      </Head>
       <Header>
         <SectionContainer>
           {/* If the post has categories, render the categories */}
