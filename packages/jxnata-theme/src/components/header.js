@@ -11,7 +11,7 @@ import { LogoIcon } from "./icons";
 const Header = ({ state }) => {
   const { title, description } = state.frontity;
   const { headerBg } = state.theme.colors[state.theme.mode];
-  const { accent } = state.theme.colors[state.theme.mode];
+  const colors = state.theme.colors[state.theme.mode];
 
   return (
     <PageHeader bg={headerBg} id="site-header">
@@ -23,7 +23,7 @@ const Header = ({ state }) => {
           {/* Heading and Description of the site */}
           <StyledLink link="/">
             {/* <SiteLogo src={Logo} alt="jxnata.dev" /> */}
-            <SiteLogo color={accent}>
+            <SiteLogo colors={colors}>
               <LogoIcon />
             </SiteLogo>
           </StyledLink>
@@ -122,7 +122,10 @@ const SiteTitle = styled.h1`
 const SiteLogo = styled.span`
   svg {
     margin-right: 10px;
-    fill: ${(props) => props.color};
+    fill: ${(props) => props.colors.accent};
+  }
+  svg:hover {
+    fill: ${(props) => props.colors.primary};
   }
 `;
 
