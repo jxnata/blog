@@ -122,10 +122,10 @@ const SiteTitle = styled.h1`
 const SiteLogo = styled.span`
   svg {
     margin-right: 10px;
-    fill: ${(props) => props.colors.accent};
+    fill: ${(props) => props.colors.primary};
   }
   svg:hover {
-    fill: ${(props) => props.colors.primary};
+    fill: ${(props) => props.colors.accent};
   }
 `;
 
